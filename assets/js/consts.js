@@ -8,7 +8,7 @@ const keys = {
 
 
 const player = {
-    x: canvas.width / 2 - 20,
+    x: canvas.width / 2 - 15,
     y: canvas.height - 55,
     width: 30,
     height: 30,
