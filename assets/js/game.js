@@ -24,6 +24,10 @@ let spawnInterval = 1000;
 window.addEventListener('keydown', (e) => keys[e.code] = true);
 window.addEventListener('keyup', (e) => keys[e.code] = false);
 
+canvas.addEventListener('touchstart', () => keys.Space = true);
+canvas.addEventListener('touchend', () => keys.Spase = false)
+
+
 function writeLives() {
     ctx.fillStyle = 'red';
     ctx.textAlign = 'right';
