@@ -93,7 +93,7 @@ if (gameState.gameOver) {
         const rect = canvas.getBoundingClientRect();
         const touchX = touch.clientX - rect.left;
 
-        player.x = touchX - player.width / 2;
+        player.x = touchX;
     })
 
 }
