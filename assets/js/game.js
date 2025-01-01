@@ -25,7 +25,7 @@ window.addEventListener('keydown', (e) => keys[e.code] = true);
 window.addEventListener('keyup', (e) => keys[e.code] = false);
 
 canvas.addEventListener('touchstart', () => keys.Space = true);
-canvas.addEventListener('touchend', () => keys.Spase = false)
+canvas.addEventListener('touchend', () => keys.Space = false)
 
 
 function writeLives() {
