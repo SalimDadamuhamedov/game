@@ -124,7 +124,7 @@ window.addEventListener('keydown', (e) => {
 
 function resetGame() {
     gameState.gameOver = false;
-    player.x = canvas.width / 2 - 20;
+    player.x = canvas.width / 2 - 15;
     player.y = canvas.height - 50;
     player.bullets.length = 0;
     clearEnemies();
