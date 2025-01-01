@@ -91,8 +91,7 @@ if (gameState.gameOver) {
     canvas.addEventListener('touchmove', (e) => {
         e.preventDefault()
         const touch = e.touches[0];
-        const rect = canvas.getBoundingClientRect();
-        const touchX = touch.clientX - rect.left;
+        const touchX = touch.clientX;
 
         player.x = touchX - player.width / 2;
     })
