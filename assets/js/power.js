@@ -2,8 +2,8 @@ import { gameState } from "./utils.js";
 
 
 const powers = [];
-const powerSize = 10;
-const powerSpeed = 0.5;
+const powerSize = 25;
+const powerSpeed = 1;
 
 function spawnPower(canvas) {
     if (gameState.gameStart) {

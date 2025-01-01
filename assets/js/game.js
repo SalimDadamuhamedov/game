@@ -1,6 +1,6 @@
 import {movePlayer, drawPlayer} from "./player.js"
 import { keys, player } from "./consts.js"
-import { updateBullets, drawBullets, shotBullet } from "./bullet.js";
+import { updateBullets, drawBullets } from "./bullet.js";
 import { spawnEnemy, updateEnemies, drawEnemies, clearEnemies, en } from "./enemy.js";
 import { gameState } from "./utils.js";
 import { spawnPower, updatePower, drawPower, clearPower } from "./power.js";
@@ -12,7 +12,7 @@ canvas.height = window.innerHeight;
 
 ctx.fillStyle = 'gray';
 ctx.textAlign = 'center';
-ctx.font = '20px Heebo';
+ctx.font = '50px Heebo';
 ctx.fillText('TAP TO PLAY...', canvas.width / 2, canvas.height / 2)
 
 
@@ -32,7 +32,7 @@ function writeLives() {
     ctx.fillStyle = 'red';
     ctx.textAlign = 'right';
     ctx.textBaseline = 'top';
-    ctx.font = '10px Arial';
+    ctx.font = '30px Arial';
     ctx.fillText(`${gameState.lives} / 3`, canvas.width - 5, 10);
 }
 
@@ -40,7 +40,7 @@ function writeScore() {
     ctx.fillStyle = 'white';
     ctx.textAlign = 'left';
     ctx.textBaseline = 'top';
-    ctx.font = '10px Arial'
+    ctx.font = '30px Arial'
     ctx.fillText(`score: ${gameState.count}`, 10, 10)
 }
 
@@ -55,14 +55,14 @@ if (gameState.gameOver) {
     back.pause()
 
     ctx.fillStyle = 'red';
-    ctx.font = '40px Arial';
+    ctx.font = '70px Arial';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillText('Game over', canvas.width / 2, canvas.height / 2);
     ctx.fillStyle = 'yellow';
     ctx.textAlign = 'center';
-    ctx.font = '16px Yantramanav';
-    ctx.fillText(`Your score: ${gameState.count}`, canvas.width / 2 , canvas.height / 2 + 30);
+    ctx.font = '40px Yantramanav';
+    ctx.fillText(`Your score: ${gameState.count}`, canvas.width / 2 , canvas.height / 2 + 50);
 
     canvas.addEventListener('click', resetGame)
 
@@ -128,14 +128,14 @@ window.addEventListener('keydown', (e) => {
 
 function resetGame() {
     gameState.gameOver = false;
-    player.x = canvas.width / 2 - 15;
-    player.y = canvas.height - 50;
+    player.x = canvas.width / 2 - 50;
+    player.y = canvas.height - 200;
     player.bullets.length = 0;
     clearEnemies();
     clearPower();
     gameState.count = 0;
     gameState.lives = 3;
-    en.enemySpeed = 1;
+    en.enemySpeed = 2;
     gameLoop()
     player.color = 'white';
     // это, чтобы при нажатии на ентер начать музыку.

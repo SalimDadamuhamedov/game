@@ -9,7 +9,7 @@ function shotBullet(player) {
                 width: 20,
                 height: 40,
                 color: 'red',
-                speed: 7,
+                speed: 12,
             })
 
             const shoot = new Audio('/assets/sound/salim.mp3');

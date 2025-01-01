@@ -3,7 +3,7 @@ import { gameState } from "./utils.js";
 const enemies = [];
 const enemySize = 100;
 const en = {
-    enemySpeed: 1,
+    enemySpeed: 2,
 }
 
 
@@ -21,7 +21,7 @@ function spawnEnemy(canvas) {
         });
     }
 
-    if (gameState.count % 15 === 0 && gameState.count !== 0 && en.enemySpeed <= 6) {
+    if (gameState.count % 15 === 0 && gameState.count !== 0 && en.enemySpeed <= 9) {
         en.enemySpeed += 0.2;
     }
 }

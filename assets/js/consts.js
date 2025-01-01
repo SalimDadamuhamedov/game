@@ -8,12 +8,12 @@ const keys = {
 
 
 const player = {
-    x: canvas.width / 2 - 15,
-    y: canvas.height - 110,
+    x: canvas.width / 2 - 50,
+    y: canvas.height - 200,
     width: 100,
     height: 100,
     color: 'white',
-    speed: 5,
+    speed: 15,
     bullets: []
 };
 
