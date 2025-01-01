@@ -38,7 +38,7 @@ function writeScore() {
     ctx.fillText(`score: ${gameState.count}`, 10, 10)
 }
 
-canvas.addEventListener('touchstart', shotBullet);
+canvas.addEventListener('touchstart', shotBullet)
 
 function gameLoop() {
 if (gameState.gameOver) {
