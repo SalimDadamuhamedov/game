@@ -38,7 +38,6 @@ function writeScore() {
     ctx.fillText(`score: ${gameState.count}`, 10, 10)
 }
 
-canvas.addEventListener('touchstart', shotBullet)
 
 function gameLoop() {
 if (gameState.gameOver) {
@@ -93,7 +92,7 @@ if (gameState.gameOver) {
         const rect = canvas.getBoundingClientRect();
         const touchX = touch.clientX - rect.left;
 
-        player.x = touchX;
+        player.x = touchX - player.width / 2;
     })
 
 }
