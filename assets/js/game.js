@@ -7,6 +7,8 @@ import { spawnPower, updatePower, drawPower, clearPower } from "./power.js";
 
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
 ctx.fillStyle = 'gray';
 ctx.textAlign = 'center';
