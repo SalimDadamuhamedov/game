@@ -5,9 +5,8 @@
 
 
 #canvas {
-    width: 1000px;
-    height: 500px;
-    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
     background-color: black;
 }
 
@@ -16,16 +15,3 @@
     justify-content: center;
 }
 
-@media (max-width: 767px) {
-    #canvas {
-        width: 600px;
-        height: 500px;
-    }
-}
-
-@media (max-width: 420px) {
-    #canvas {
-        width: 400px;
-        height: 500px;
-    }
-}
