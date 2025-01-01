@@ -9,9 +9,9 @@ const keys = {
 
 const player = {
     x: canvas.width / 2 - 15,
-    y: canvas.height - 50,
-    width: 60,
-    height: 60,
+    y: canvas.height - 110,
+    width: 100,
+    height: 100,
     color: 'white',
     speed: 5,
     bullets: []

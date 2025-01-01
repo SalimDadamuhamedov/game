@@ -1,7 +1,7 @@
 import { gameState } from "./utils.js";
 
 const enemies = [];
-const enemySize = 60;
+const enemySize = 100;
 const en = {
     enemySpeed: 1,
 }
