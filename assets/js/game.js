@@ -86,15 +86,12 @@ if (gameState.gameOver) {
 
     gameState.gameStart = true;
 
-    canvas.addEventListener('touchstart', (e) => {
+    canvas.addEventListener('touchmove', (e) => {
         const touch = e.touches[0];
-        const touchX = touch.clientX;
+        const rect = canvas.getBoundingClientRect();
+        const touchX = touch.clientX - rect.left;
 
-        if (touchX < canvas.width / 2) {
-            player.x -= player.speed
-        } else {
-            player.x += player.speed
-        }
+        player.x = touchX - player.width / 2;
     })
 
 }
