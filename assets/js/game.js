@@ -14,7 +14,7 @@ ctx.font = '20px Heebo';
 ctx.fillText('TAP TO PLAY...', canvas.width / 2, canvas.height / 2)
 
 
-canvas.addEventListener('dblclick', shotBullet)
+
 
 let spawnInterval = 1000;
 
