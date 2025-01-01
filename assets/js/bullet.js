@@ -4,10 +4,10 @@ function shotBullet(player) {
     if (player.bullets.length < 1) {
         
             player.bullets.push({
-                x: player.x + player.width / 2 - 4,
+                x: player.x + player.width / 2 - 10,
                 y: player.y,
-                width: 8,
-                height: 20,
+                width: 20,
+                height: 40,
                 color: 'red',
                 speed: 7,
             })
