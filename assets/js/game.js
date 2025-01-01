@@ -86,6 +86,17 @@ if (gameState.gameOver) {
 
     gameState.gameStart = true;
 
+    canvas.addEventListener('touchstart', (e) => {
+        const touch = e.touches[0];
+        const touchX = touch.clientX;
+
+        if (touchX < canvas.width / 2) {
+            player.x -= player.speed
+        } else {
+            player.x += player.speed
+        }
+    })
+
 }
 
 setInterval(() => {
