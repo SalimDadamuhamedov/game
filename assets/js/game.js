@@ -106,7 +106,6 @@ window.addEventListener('keydown', (e) => {
 })
 
 
-canvas.addEventListener('click', resetGame);
 
 
 function resetGame() {
