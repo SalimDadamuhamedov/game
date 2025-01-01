@@ -14,6 +14,23 @@ ctx.font = '20px Heebo';
 ctx.fillText('TAP TO PLAY...', canvas.width / 2, canvas.height / 2)
 
 
+
+canvas.addEventListener('touchmove', (e) => {
+    const touch = e.touches[0];
+    const rect = canvas.getBoundingClientRect();
+    const touchX = touch.clientX - rect.left;
+
+    player.x = touchX - player.width / 2;
+
+    if (player.x < 0) player.x = 0;
+    if (player.x + player.width > canvas.width) player.x = canvas.width - player.width;
+})
+
+
+
+
+
+
 let spawnInterval = 1000;
 
 
@@ -103,6 +120,10 @@ window.addEventListener('keydown', (e) => {
     }
 })
 
+
+canvas.addEventListener('click', resetGame);
+
+
 function resetGame() {
     gameState.gameOver = false;
     player.x = canvas.width / 2 - 20;
@@ -116,7 +137,9 @@ function resetGame() {
     gameLoop()
     player.color = 'white';
     // это, чтобы при нажатии на ентер начать музыку.
-    musicPlay()
+    musicPlay();
+
+    canvas.removeEventListener('click', resetg)
 }
 
 const back = new Audio('/assets/sound/back.mp3');
