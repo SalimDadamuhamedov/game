@@ -122,8 +122,6 @@ function resetGame() {
     player.color = 'white';
     // это, чтобы при нажатии на ентер начать музыку.
     musicPlay();
-
-    canvas.removeEventListener('click', resetg)
 }
 
 const back = new Audio('/assets/sound/back.mp3');
