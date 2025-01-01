@@ -1,6 +1,6 @@
 import {movePlayer, drawPlayer} from "./player.js"
 import { keys, player } from "./consts.js"
-import { updateBullets, drawBullets } from "./bullet.js";
+import { updateBullets, drawBullets, shotBullet } from "./bullet.js";
 import { spawnEnemy, updateEnemies, drawEnemies, clearEnemies, en } from "./enemy.js";
 import { gameState } from "./utils.js";
 import { spawnPower, updatePower, drawPower, clearPower } from "./power.js";
@@ -12,21 +12,6 @@ ctx.fillStyle = 'gray';
 ctx.textAlign = 'center';
 ctx.font = '20px Heebo';
 ctx.fillText('TAP TO PLAY...', canvas.width / 2, canvas.height / 2)
-
-
-
-canvas.addEventListener('touchmove', (e) => {
-    const touch = e.touches[0];
-    const rect = canvas.getBoundingClientRect();
-    const touchX = touch.clientX - rect.left;
-
-    player.x = touchX - player.width / 2;
-
-    if (player.x < 0) player.x = 0;
-    if (player.x + player.width > canvas.width) player.x = canvas.width - player.width;
-})
-
-
 
 
 
