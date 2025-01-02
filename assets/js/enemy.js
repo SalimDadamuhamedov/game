@@ -22,7 +22,7 @@ function spawnEnemy(canvas) {
     }
 
     if (gameState.count % 15 === 0 && gameState.count !== 0 && en.enemySpeed <= 12) {
-        en.enemySpeed += 0.3;
+        en.enemySpeed += 0.5;
     }
 }
 
