@@ -6,6 +6,10 @@ const keys = {
     Space: false,
 };
 
+const canvas = document.getElementById('canvas');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
 
 const player = {
     x: canvas.width / 2 - 50,
@@ -19,4 +23,4 @@ const player = {
 
 
 
-export {keys, player}
+export {keys, player, canvas}

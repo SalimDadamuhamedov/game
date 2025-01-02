@@ -1,15 +1,14 @@
 import {movePlayer, drawPlayer} from "./player.js"
-import { keys, player } from "./consts.js"
+import { keys, player, canvas } from "./consts.js"
 import { updateBullets, drawBullets } from "./bullet.js";
 import { spawnEnemy, updateEnemies, drawEnemies, clearEnemies, en } from "./enemy.js";
 import { gameState } from "./utils.js";
 import { spawnPower, updatePower, drawPower, clearPower } from "./power.js";
 
-const canvas = document.getElementById('canvas');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-const ctx = canvas.getContext('2d');
 
+
+
+const ctx = canvas.getContext('2d');
 
 ctx.fillStyle = 'gray';
 ctx.textAlign = 'center';
