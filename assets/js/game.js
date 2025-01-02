@@ -50,7 +50,7 @@ if (gameState.gameOver) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = 'black';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-
+    gameState.gameStart = false;
     // это нужно, чтобы остановить музыку после поражения.
     back.pause()
 
@@ -100,6 +100,11 @@ if (gameState.gameOver) {
         const touchX = touch.clientX;
 
         player.x = touchX - player.width / 2;
+
+
+
+        if (player.x < 0) player.x = 0;
+        if (player.x + player.width > canvas.width) player.x = canvas.width - player.x;
     })
 
 
@@ -135,6 +140,7 @@ function resetGame() {
     clearPower();
     gameState.count = 0;
     gameState.lives = 3;
+    gameState.gameStart = true;
     en.enemySpeed = 2;
     gameLoop()
     player.color = 'white';
