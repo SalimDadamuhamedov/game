@@ -1,16 +1,6 @@
 import {keys} from "./consts.js"
 import { shotBullet } from "./bullet.js";
 
-canvas.addEventListener('touchstart', (e) => {
-    const touch = e.touches[0];
-    const touchX = touch.clientX;
-
-    if (touchX < canvas.width / 2) {
-        player.x -= player.speed;
-    } else {
-        player.x += player.speed;
-    }
-})
 
 const movePlayer = (player) => {
     if (keys.ArrowLeft && player.x > 0) {

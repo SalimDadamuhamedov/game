@@ -6,9 +6,10 @@ import { gameState } from "./utils.js";
 import { spawnPower, updatePower, drawPower, clearPower } from "./power.js";
 
 const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
+const ctx = canvas.getContext('2d');
+
 
 ctx.fillStyle = 'gray';
 ctx.textAlign = 'center';
@@ -70,6 +71,8 @@ if (gameState.gameOver) {
     return;
 }
 
+console.log(player.y)
+console.log(player.x)
     
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -104,7 +107,7 @@ if (gameState.gameOver) {
 
 
         if (player.x < 0) player.x = 0;
-        if (player.x + player.width > canvas.width) player.x = canvas.width - player.x;
+        if (player.x + player.width > canvas.width) player.x = canvas.width - player.width;
     })
 
 
@@ -146,7 +149,9 @@ function resetGame() {
     player.color = 'white';
     // это, чтобы при нажатии на ентер начать музыку.
     musicPlay();
-    canvas.removeEventListener('click', resetGame)
+    canvas.removeEventListener('click', resetGame);
+    console.log(player.y)
+    console.log(player.x)
 }
 
 const back = new Audio('/assets/sound/back.mp3');
