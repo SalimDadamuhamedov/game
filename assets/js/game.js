@@ -71,8 +71,6 @@ if (gameState.gameOver) {
     return;
 }
 
-console.log(player.y)
-console.log(player.x)
     
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -150,8 +148,6 @@ function resetGame() {
     // это, чтобы при нажатии на ентер начать музыку.
     musicPlay();
     canvas.removeEventListener('click', resetGame);
-    console.log(player.y)
-    console.log(player.x)
 }
 
 const back = new Audio('/assets/sound/back.mp3');
