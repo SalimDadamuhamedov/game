@@ -17,7 +17,7 @@ const player = {
     width: 100,
     height: 100,
     color: 'white',
-    speed: 15,
+    speed: 20,
     bullets: []
 };
 

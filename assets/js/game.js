@@ -64,7 +64,7 @@ if (gameState.gameOver) {
     ctx.font = '40px Yantramanav';
     ctx.fillText(`Your score: ${gameState.count}`, canvas.width / 2 , canvas.height / 2 + 50);
 
-    canvas.addEventListener('click', resetGame)
+    canvas.addEventListener('dblclick', resetGame)
 
     
     return;
@@ -146,7 +146,7 @@ function resetGame() {
     player.color = 'white';
     // это, чтобы при нажатии на ентер начать музыку.
     musicPlay();
-    canvas.removeEventListener('click', resetGame);
+    canvas.removeEventListener('dblclick', resetGame);
 }
 
 const back = new Audio('/assets/sound/back.mp3');
