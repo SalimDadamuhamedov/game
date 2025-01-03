@@ -38,7 +38,7 @@ function updateEnemies(player, canvas) {
             enemy.y + enemy.height > player.y) {
                 enemies.splice(index, 1)
             gameState.lives--;
-            const end = new Audio('/assets/sound/vzriv.mp3');
+            const end = new Audio('./assets/sound/vzriv.mp3');
             end.play();
             if (gameState.lives === 0) {
                 gameState.gameOver = true;
@@ -50,7 +50,7 @@ function updateEnemies(player, canvas) {
             gameState.lives --;
             if (gameState.lives === 0 ) {
                 gameState.gameOver = true;
-                const lose = new Audio('/assets/sound/poraj.mp3');
+                const lose = new Audio('./assets/sound/poraj.mp3');
                 lose.play();
             }
         }

@@ -12,7 +12,7 @@ function shotBullet(player) {
                 speed: 20,
             })
 
-            const shoot = new Audio('/assets/sound/salim.mp3');
+            const shoot = new Audio('./assets/sound/salim.mp3');
             shoot.play();
         
     }

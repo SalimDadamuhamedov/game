@@ -29,7 +29,7 @@ function updatePower(player, canvas) {
         ) {
             powers.splice(index, 1);
             player.color = 'gold'
-            const plus = new Audio('/assets/sound/power.mp3');
+            const plus = new Audio('./assets/sound/power.mp3');
             plus.volume = 1;
             gameState.count += 3;
             if (gameState.lives < 3) gameState.lives += 1;

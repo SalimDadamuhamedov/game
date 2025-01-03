@@ -149,7 +149,7 @@ function resetGame() {
     canvas.removeEventListener('dblclick', resetGame);
 }
 
-const back = new Audio('/assets/sound/back.mp3');
+const back = new Audio('./assets/sound/back.mp3');
 back.volume = 0.5;
 back.loop = true;
 back.pause();
