@@ -24,8 +24,24 @@ let spawnInterval = 1000;
 window.addEventListener('keydown', (e) => keys[e.code] = true);
 window.addEventListener('keyup', (e) => keys[e.code] = false);
 
-canvas.addEventListener('touchstart', () => keys.Space = true);
-canvas.addEventListener('touchend', () => keys.Space = false)
+
+canvas.addEventListener('touchend', () => {
+    if (player.bullets.length < 10) {
+
+        player.bullets.push({
+            x: player.x + player.width / 2 - 10,
+            y: player.y,
+            width: 20,
+            height: 40,
+            color: 'red',
+            speed: 20,
+        })
+
+        const shoot = new Audio('./assets/sound/salim.mp3');
+        shoot.play();
+
+    }
+})
 
 
 function writeLives() {
