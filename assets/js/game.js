@@ -26,7 +26,7 @@ window.addEventListener('keyup', (e) => keys[e.code] = false);
 
 
 canvas.addEventListener('touchend', () => {
-    if (player.bullets.length < 10) {
+    if (player.bullets.length < 3) {
 
         player.bullets.push({
             x: player.x + player.width / 2 - 10,
